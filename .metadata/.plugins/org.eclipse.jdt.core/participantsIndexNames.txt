@@ -3,6 +3,8 @@ E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\
 \BTVN_Phuong_Perfume\src\main\java
 E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\891615493.index
 \Bai3_JSP\src\main\java
+E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2764287514.index
+\PhuongPerfumeM3\src\main\java
 E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2921462163.index
 \Bai3_JSP\src\main\java
 E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1543390501.index
@@ -11,3 +13,5 @@ E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\
 \BTVN_bai2_QuanLyBanSua\src\main\java
 E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2241863356.index
 \BTVN_Phuong_Perfume\src\main\java
+E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1597414879.index
+\PhuongPerfumeM3\src\main\java
