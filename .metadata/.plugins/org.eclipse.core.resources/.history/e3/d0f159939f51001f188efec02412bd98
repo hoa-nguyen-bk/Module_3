@@ -1,0 +1,24 @@
+package businessLogic;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javaBean.LoaiSua;
+
+public class LoaiSuaBL {
+	public static List<LoaiSua> docTatCa(){
+		List<LoaiSua> ds = new ArrayList<LoaiSua>();
+		String sql = "SELECT * FROM loai_sua";
+		try (Connection con = CSDL.){
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

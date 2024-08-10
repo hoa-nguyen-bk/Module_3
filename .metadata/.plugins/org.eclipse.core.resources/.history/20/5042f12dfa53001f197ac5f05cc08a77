@@ -1,0 +1,14 @@
+
+<%@ attribute name="tieuDe" description="" required="true" type="String" %>
+<%@ attribute name="noiDung" description="" required="true" fragment="true" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

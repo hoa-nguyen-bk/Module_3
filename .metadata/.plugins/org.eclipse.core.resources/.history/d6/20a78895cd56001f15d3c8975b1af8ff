@@ -1,0 +1,83 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="businessLogic.CSDL"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thông tin khách hàng</title>
+<%--<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> --%>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/nes.css/2.3.0/css/nes.min.css"
+	rel="stylesheet">
+
+<%!Connection con = CSDL.getCon();
+	Statement stm;
+	ResultSet rs;
+	String sql = "SELECT * FROM khach_hang";%>
+<%
+stm = con.createStatement();
+rs = stm.executeQuery(sql);
+%>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Thông tin khách hàng</h1>
+	<table border="1">
+		<tr>
+			<th>Mã KH</th>
+			<th>Tên khách hàng</th>
+			<th>Giới tính</th>
+			<th>Địa chỉ</th>
+			<th>Số điện thoại</th>
+			<th>Email</th>
+			<th><img src="img/but_sua.png" alt="" /></th>
+			<th><img src="img/but_xoa.png" alt="" /></th>
+		</tr>
+		<%
+		while (rs.next()) {
+		%>
+		<tr>
+			<td><%=rs.getString("ma_khach_hang")%></td>
+			<td><%=rs.getString("ten_khach_hang")%></td>
+			<td><img src="img/<%=rs.getBoolean("phai") ? "nu" : "nam"%>.jpg"
+				alt="" /></td>
+			<td><%=rs.getString("dia_chi")%></td>
+			<td><%=rs.getString("dien_thoai")%></td>
+			<td><%=rs.getString("email")%></td>
+			<td>Sửa</td>
+			<td>Xóa</td>
+		</tr>
+		<%
+		}
+		%>
+	</table>
+	<br />
+	<div id="search_form" class="nes-container with-title">
+		<p class="title">Cập nhập thông tin khách hàng</p>
+
+		<div class="input">
+			<label>Mã khách hàng</label> <input type="text" class="nes-input">
+		</div>
+		<div class="input">
+			<label>Tên khách hàng</label> <input type="text" class="nes-input">
+		</div>
+		<div class="input">
+			<label>Giới tính</label> <input type="email" class="nes-input">
+		</div>
+		<div class="input">
+			<label>Địa chỉ</label> <input type="text" class="nes-input">
+		</div>
+		<div class="input">
+			<label>Điện thoại</label> <input type="text" class="nes-input">
+		</div>
+
+		<div class="input">
+			<button type="submit" class="nes-btn">Submit</button>
+		</div>
+	</div>
+</body>
+</html>

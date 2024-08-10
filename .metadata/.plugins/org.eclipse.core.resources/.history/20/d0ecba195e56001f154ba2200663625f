@@ -1,0 +1,8 @@
+package businessLogic;
+
+import java.sql.Connection;
+
+public class CSDL_rewrite {
+	
+	private static Connection connection;
+}

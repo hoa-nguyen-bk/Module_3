@@ -1,0 +1,12 @@
+package businessLogic;
+
+public class LoaiSuaBL {
+	public static List<LoaiSua> docTatCa(){
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

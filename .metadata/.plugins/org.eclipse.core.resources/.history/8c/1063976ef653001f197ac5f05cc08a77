@@ -1,0 +1,79 @@
+package btvn;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+/**
+ * Servlet implementation class UploadServlet
+ */
+@WebServlet("/UploadServlet")
+@MultipartConfig
+public class UploadServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public UploadServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.sendRedirect("btvn_3_4_upload-file.jsp");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		Part part = request.getPart("tapTin");
+		String tt, tm;
+		tm = getServletContext().getRealPath("/uploads/");
+		
+		// lấy tên tập tin
+		tt = part.getSubmittedFileName();
+		InputStream is = part.getInputStream();
+		OutputStream os = new FileOutputStream(tm + tt);
+		int b;
+		
+		// Cách 1: ghi file: này là đọc ghi từng byte, giờ mình đọc ghi từng khối 1
+//		while((b=is.read())!=-1) {
+//			os.write(b);
+//		}
+		// Cách 2 đọc 1 lần 1 cái mảng byte luôn
+		byte[] mb = new byte[1024];
+		
+		
+		//đóng file
+		is.close();
+		os.close();
+		
+		//giờ mình muốn quay trở về lại để cho người ta tải tiếp thì mình sẽ dùng get
+//		doGet(request, response);
+		
+		request.setAttribute("tt", tt);
+		request.getRequestDispatcher("btvn_3_4_upload-file.jsp").forward(request, response);
+		
+		//mình mún biết thư mục ngầm định của uploads/ này nằm đâu thì mình vào
+//		E:\HOC\java_khtn\Module_3\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Bai3_JSP\uploads
+		//bật server -> open F3-> open launch configuration -> argument -> xem -Dwtp.deploy= chính là khứa ở trên
+	}
+}

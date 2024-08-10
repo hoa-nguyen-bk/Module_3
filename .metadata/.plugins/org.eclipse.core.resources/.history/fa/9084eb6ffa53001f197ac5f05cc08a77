@@ -1,0 +1,28 @@
+<%@ tag language="java" pageEncoding="UTF-8" %>
+<%@ attribute name="tieuDe" description="empty tiu de" required="true" type="String" %>
+<%@ attribute name="noiDung" description="empty noi Dung" required="true" fragment="true" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${tieuDe }</title>
+</head>
+<body>
+<header>
+<h1>Header</h1>
+</header>
+<main>
+<nav>
+<h2>Thực đơn</h2>
+<ul>
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+<li><a href="#">Link 4</a></li>
+
+</ul>
+</nav>
+</main>
+</body>
+</html>

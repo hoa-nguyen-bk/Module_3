@@ -1,0 +1,8 @@
+MVC:
+Model:
+	1. Java bean (LoaiSua, HangSua, Sua)
+	2. Business login (LoaiSuaBL, HangSuaBL, SuaBL)
+View
+	3. JSP
+Controller
+	4. Servlet	

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Minh họa các biến ẩn</title>
+<%
+//application
+application.setAttribute("donVi", "Trung tâm tin học");
+//section
+session.setAttribute("tenND", "Trần thị hòa minzy xinh đẹp");
+%>
+</head>
+<body>
+
+</body>
+</html>
