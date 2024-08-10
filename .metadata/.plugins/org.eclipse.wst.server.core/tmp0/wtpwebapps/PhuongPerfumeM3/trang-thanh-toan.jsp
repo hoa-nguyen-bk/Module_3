@@ -3,6 +3,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="Views/dau-trang.jsp"/>
-<jsp:include page="Views/thanh-toan.jsp"/>
-<jsp:include page="Views/cuoi-trang.jsp"/>
+<jsp:include page="views/dau-trang.jsp"/>
+<jsp:include page="views/thanh-toan.jsp"/>
+<jsp:include page="views/cuoi-trang.jsp"/>
