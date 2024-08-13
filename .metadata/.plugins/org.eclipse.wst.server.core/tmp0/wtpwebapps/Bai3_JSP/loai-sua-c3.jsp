@@ -1,4 +1,4 @@
-<%@page import="javaBeans.LoaiSua"%>
+<%@page import="javaBean.LoaiSua"%>
 <%@page import="java.util.List"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
